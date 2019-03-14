@@ -59,6 +59,16 @@ def timestamp(stampString):
    print("Unix outside of date range")
  except:
   print("Not valid Unix time")
+ #APFS Time
+ try:
+  apfs = datetime.fromtimestamp(result/1000)
+  if apfs > minDate and apfs < maxDate:
+   print("APFS:", apfs)
+   final = apfs
+  else:
+   print("APFS outside of date range")
+ except:
+  print("Not valid APFS time") 
   
  return final
  
